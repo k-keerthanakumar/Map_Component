@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MapComponent</string>
+
+  <string name="gps_title">GPS Setting</string>
+    <string name="location_requires_message">To enable location-based comparison function, please activate GPS on device used</string>
+    <string name="gps_possitive">Settings</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="gps_feature_title">No GPS function available</string>
+    <string name="open_in_maps">Open In Google Maps</string>
+
+  <string name="location_on">Turn on location</string>
+
+    <string name="date">GPs</string>
+
+</resources>

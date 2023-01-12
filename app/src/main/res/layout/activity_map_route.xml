@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/search_dest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        android:weightSum="2"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10">
+
+        <EditText
+            android:id="@+id/search_place"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Starting"
+            android:layout_weight="0.5"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/dest_place"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Destination"
+            android:layout_weight="0.5"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/search_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Search" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginStart="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/search_dest"
+        android:text="Cancel" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"/>
+
+
+</LinearLayout>
